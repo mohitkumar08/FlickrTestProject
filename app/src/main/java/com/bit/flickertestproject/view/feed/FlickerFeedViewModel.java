@@ -3,7 +3,6 @@ package com.bit.flickertestproject.view.feed;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 
 import com.bit.flickertestproject.BuildConfig;
@@ -13,7 +12,6 @@ import com.bit.flickertestproject.data.server.model.FlickerFeedResponse;
 import com.bit.flickertestproject.data.server.model.Item;
 import com.bit.flickertestproject.data.server.service.FlickerFeedService;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

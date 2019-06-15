@@ -1,6 +1,5 @@
 package com.bit.flickertestproject.view.feed;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProvider.AndroidViewModelFactory;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.bit.flickertestproject.R;
-import com.bit.flickertestproject.data.server.model.FlickerFeedResponse;
 import com.bit.flickertestproject.data.server.model.Item;
 import com.bit.flickertestproject.util.Constants;
 import com.bit.flickertestproject.view.feed.adapter.FeedAdapter;
@@ -77,6 +75,10 @@ public class FlickerFeedActivity extends AppCompatActivity implements OnClickRec
             isLoading = false;
 
         });
+        flickerFeedViewModel.getFeedErrorMutableLiveData().observe(this, throwable -> {
+            hideProgressView();
+            isLoading = false;
+        });
     }
 
     private void showProgressView() {
@@ -96,7 +98,7 @@ public class FlickerFeedActivity extends AppCompatActivity implements OnClickRec
             Bundle data = new Bundle();
             data.putString(Constants.IMAGE_PATH_KEY, item.getMedia().getcImage());
             fullScreenDialogFragment.setArguments(data);
-            fullScreenDialogFragment.show(getSupportFragmentManager(), "FullScreen");
+            fullScreenDialogFragment.show(getSupportFragmentManager(), "FullScreenImageView");
         } catch (Exception e) {
             e.printStackTrace();
         }
