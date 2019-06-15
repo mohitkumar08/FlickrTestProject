@@ -19,6 +19,7 @@ ext {
     stethoVersion = '1.5.0'
     stetoOkhttp3Version = '1.5.0'
     picassoVersion  = '2.71828'
+    androidXAppcompactVersion   = '1.0.0-alpha3'
 
 
 
@@ -33,6 +34,7 @@ ext {
     loggingInterceptorPackage = 'com.squareup.okhttp3'
     stethoPackage = 'com.facebook.stetho'
     picassoPackage  ='com.squareup.picasso'
+    androidXAppcompactPackage   = 'androidx.appcompat'
 
 
     // Dependencies
@@ -68,6 +70,7 @@ ext {
     ]
 
     picasso = buildDependency(picassoPackage, 'picasso', picassoVersion)
+    androidXAppcompact  = buildDependency(androidXAppcompactPackage, 'appcompat', androidXAppcompactVersion)
 
 
 }

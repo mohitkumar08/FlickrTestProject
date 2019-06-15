@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
-
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -45,11 +49,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+  //  implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation supportDependencies.appCompat
     implementation supportDependencies.design
+
+    implementation supportDependencies.recyclerview
 
     implementation rxJavaDependencies.rxJava
     implementation rxJavaDependencies.rxAndroid
@@ -62,6 +69,6 @@ dependencies {
     implementation squareupDependencies.okhttpLoggingInterceptor
     implementation facebookDependencies.stetho_core
     implementation facebookDependencies.stetho_okhttp
-
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 }

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">FlickerTestProject</string>
+    <string name="app_name">FlickerTestProject</string>'
+    <string name="profile_url">https://farm3.staticflickr.com/0/buddyicons/%s.jpg</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

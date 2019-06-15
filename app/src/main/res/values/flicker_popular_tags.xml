@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="flicker_popular_tags">
+        <item>sunset</item>
+        <item>water</item>
+        <item>sky</item>
+        <item>flower</item>
+        <item>nature</item>
+        <item>green</item>
+        <item>light</item>
+        <item>dog</item>
+        <item>cat</item>
+        <item>clouds</item>
+        <item>winter</item>
+        <item>park</item>
+        <item>sea</item>
+        <item>human</item>
+        <item>trees</item>
+        <item>river</item>
+        <item>food</item>
+        <item>house</item>
+        <item>garden</item>
+        <item>music</item>
+        <item>orange</item>
+        <item>moon</item>
+
+
+    </string-array>
+
+
+</resources>
